@@ -1,0 +1,251 @@
+﻿<%@ Master Language="VB" CodeFile="StudentPortal.master.vb" Inherits="StudentPortal_StudentPortal" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Student Portal</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../Content/custom.min11.css" rel="stylesheet">
+    
+	<link href='http://fonts.googleapis.com/css?family=Oswald|Lato|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="mediaelement/mediaelementplayer.min.css" />
+	<link rel="stylesheet" href="css/perfect-scrollbar.min.css" />
+	<link rel="stylesheet" href="css/demo.css" />
+	<link rel="stylesheet" href="css/vimuse-dark.css" />
+
+
+</head>
+<body class="nav-md">
+    <form runat="server">
+       
+
+        <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="StudentPortal.aspx" class="site_title"> <img style="max-height:30px" src="http://www.rbtc.org/images/stories/RBTCModules/logo.png"/><span style="font-size:16px"> Rhema Chinese Online</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="../images/sean.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2><asp:LoginName ID="LoginName2" runat="server" /></h2>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="glyphicon glyphicon-book"></i> Student Portal <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="StudentProfile.aspx">Student Profile</a></li>
+                      <li><a href="StudentPortal.aspx">Current Course Progress</a></li>
+                      <li><a href="CertofComplete.aspx">Certificates of Completion</a></li>
+                    </ul>
+                  </li>
+
+                <ul class="nav side-menu">
+                  <li><a><i class="glyphicon glyphicon-pencil"></i>  Course Registration <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/StudentPortal/courses.aspx">Courses</a></li>
+                      <li><a href="UpcomingCourses.aspx">Upcoming Courses</a></li>
+                      <li><a href="ConverttoCredit.aspx">Convert to for Credit</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="glyphicon glyphicon-screenshot"></i>  Rhema Online Chinese <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="About.aspx">About</a></li>
+                      <li><a href="FAQs.aspx">FAQ</a></li>
+                      <li><a href="Referral.aspx">Refer</a></li>
+                      <li><a href="Contact.aspx">Contact</a></li>
+                    </ul>
+                  </li>
+                  
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../images/sean.jpg" alt="">Welcome, <asp:LoginName ID="LoginName_DropDown" runat="server" />
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li>
+                    <li>
+                        <asp:LoginStatus ID="LoginStatus1" LogOutPageUrl="~/Default.aspx" LogOutAction="Redirect" LogoutText="Log Out" runat="server" />
+                    </li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>Gary Crowl</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="../images/sean.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>Welcome, <asp:LoginName ID="LoginName1" runat="server" /></span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>Gary Crowl</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>Gary Crowl</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+       
+        <!-- /page content -->
+                  <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Rhema Chinese Online</p>
+            </footer>
+        </div>
+
+      </div>
+    </div>
+            </form>
+
+        <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+
+                <!-- Custom Theme Scripts -->
+    <script src="../js/custom.min.js"></script>
+
+    <script>
+     $(document).ready(function() {
+         $('#my-player').vimuse();
+     });
+</script>
+
+</body>
+</html>

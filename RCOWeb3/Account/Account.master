@@ -1,0 +1,174 @@
+﻿<%@ Master Language="VB" CodeFile="Account.master.vb" Inherits="Account_Account" %>
+
+<%@ Import Namespace="RCOWeb2" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/vendors/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../Content/custom.min11.css" rel="stylesheet">
+
+</head>
+<body class="nav-md">
+    <form runat="server">
+        <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="../Default.aspx" class="site_title"> <img style="max-height:30px" src="http://www.rbtc.org/images/stories/RBTCModules/logo.png"/><span style="font-size:16px"> Rhema Chinese Online</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            
+
+            <br />
+
+            <!-- sidebar menu -->
+
+
+
+
+
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section" style="margin-left:15px;margin-top:5px;">
+
+ 
+                  </div>
+             
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div Class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span Class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span Class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span Class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout">
+                <span Class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+ <!-- top navigation -->
+       <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul Class="nav navbar-nav navbar-right">
+                 
+                <li Class="">
+ 
+
+               <div class="dropdown">
+  <button class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Select Language  <span class="caret"></span>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <ul>
+    <li><a class="dropdown-item" href="#">English</a></li>
+   <li> <a class="dropdown-item" href="#">Traditional</a> </li>
+   <li><a class="dropdown-item" href="#">Simplified</a></li>
+      </ul>
+  </div>
+</div> 
+</li>
+                
+                    
+                    
+                   
+                
+                  </ul>
+        
+            </nav>
+          </div>
+
+       </div>
+        </div>
+        <!-- /top navigation -->
+
+       
+        <!-- /page content -->
+            <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+
+ 
+</div>
+    </form>
+        <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <!-- jQuery Smart Wizard -->
+    <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+        <!-- Custom Theme Scripts -->
+    <script src="../js/custom.min.js"></script>
+
+    <script type="text/javascript" src="../js/bootstrap/bootstrap-dropdown.js"></script>
+<script>
+
+
+     $(document).ready(function(){
+        $('.dropdown-toggle').dropdown()
+     });
+
+     $(document).ready(function () {
+         $('#wizard').smartWizard();
+
+         $('.buttonNext').addClass('btn btn-success');
+         $('.buttonPrevious').addClass('btn btn-primary');
+         $('.buttonFinish').addClass('btn btn-default');
+
+
+     });
+
+
+</script>
+
+</body>
+</html>
