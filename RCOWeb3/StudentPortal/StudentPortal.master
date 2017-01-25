@@ -78,7 +78,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="glyphicon glyphicon-pencil"></i>  Course Registration <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="/StudentPortal/courses.aspx">Courses</a></li>
+                      <li><a href="/StudentPortal/Courses.aspx">Courses</a></li>
                       <li><a href="UpcomingCourses.aspx">Upcoming Courses</a></li>
                       <li><a href="ConverttoCredit.aspx">Convert to for Credit</a></li>
                     </ul>

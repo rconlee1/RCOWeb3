@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="StudentPortal.master" AutoEventWireup="false" CodeFile="courses.aspx.vb" Inherits="StudentPortal_courses" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="StudentPortal.master" AutoEventWireup="false" CodeFile="Courses.aspx.vb" Inherits="Courses" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <!-- Course Cards -->
     <div class="right_col" role="main">
          <div class="page-title">
@@ -33,14 +32,14 @@
                             <div class="clearfix"></div>
                           </div>
                           <div class="x_content">
-                              
+
                             <div style="text-align: center; margin-bottom: 17px">
                                 <img src="../images/rightousness.png" />
-                             
-                            </div>                         
 
-                            <p>Course Description goes here.</p>
-<button type="button" class="btn btn-block btn-elegant">Start Course</button>
+                            </div>
+
+                            <p>CHoose This Course For Test</p>
+<a href="coursecontent.aspx"><button type="button" class="btn btn-block btn-elegant">Start Course</button></a>
                           </div>
                         </div>
                       </div>
@@ -57,11 +56,11 @@
                             <div class="clearfix"></div>
                           </div>
                           <div class="x_content">
-                              
+
                             <div style="text-align: center; margin-bottom: 17px">
                                 <img src="../images/rightousness.png" />
-                             
-                            </div>                         
+
+                            </div>
 
                             <p>Course Description goes here.</p>
 <button type="button" class="btn btn-block btn-elegant">Start Course</button>
@@ -81,11 +80,11 @@
                             <div class="clearfix"></div>
                           </div>
                           <div class="x_content">
-                              
+
                             <div style="text-align: center; margin-bottom: 17px">
                                 <img src="../images/rightousness.png" />
-                             
-                            </div>                         
+
+                            </div>
 
                             <p>Course Description goes here.</p>
 <button type="button" class="btn btn-block btn-elegant">Start Course</button>
@@ -105,11 +104,11 @@
                             <div class="clearfix"></div>
                           </div>
                           <div class="x_content">
-                              
+
                             <div style="text-align: center; margin-bottom: 17px">
                                 <img src="../images/rightousness.png" />
-                             
-                            </div>                         
+
+                            </div>
 
                             <p>Course Description goes here.</p>
 <button type="button" class="btn btn-block btn-elegant">Start Course</button>
@@ -126,17 +125,17 @@
              </div>
         <div class="col-md-3 col-xs-12 widget widget_tally_box">
                         <div class="x_panel ui-ribbon-container fixed_height_390">
-                        
+
                           <div class="x_title">
                             <h2>Believer's Authority</h2>
                             <div class="clearfix"></div>
                           </div>
                           <div class="x_content">
-                              
+
                             <div style="text-align: center; margin-bottom: 17px">
                                 <img src="../images/rightousness.png" />
-                             
-                            </div>                         
+
+                            </div>
 
                             <p>Course Description goes here.</p>
 <button type="button" class="btn btn-block btn-elegant">Resume Course</button>
@@ -160,5 +159,4 @@
   <script src="../js/pace/pace.min.js"></script>
   </div>
 </asp:Content>
-
 
